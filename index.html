@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Trabajo Forestal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Trabajo Forestal</h1>
+        
+        <form id="forestalForm">
+            <div class="form-section">
+                <h2>Información General</h2>
+                <input type="text" id="proyecto" placeholder="Nombre del Proyecto" required>
+                <input type="date" id="fecha" required>
+                <input type="text" id="ubicacion" placeholder="Ubicación del Proyecto" required>
+                <input type="text" id="cliente" placeholder="Cliente" required>
+            </div>
+
+            <div class="form-section">
+                <h2>Detalles Técnicos</h2>
+                <input type="number" id="hectareas" placeholder="Hectáreas evaluadas" required>
+                <input type="text" id="especiesIdentificadas" placeholder="Especies identificadas" required>
+                <input type="text" id="tipoSuelo" placeholder="Tipo de suelo" required>
+                <textarea id="observaciones" placeholder="Observaciones generales"></textarea>
+            </div>
+
+            <div class="form-section">
+                <h2>Mediciones</h2>
+                <input type="number" id="alturaPromedio" placeholder="Altura promedio (m)" required>
+                <input type="number" id="dap" placeholder="DAP promedio (cm)" required>
+                <input type="number" id="densidad" placeholder="Densidad (árboles/ha)" required>
+            </div>
+
+            <div class="form-section">
+                <h2>Resultados</h2>
+                <input type="text" id="recomendaciones" placeholder="Recomendaciones" required>
+                <input type="text" id="tratamientos" placeholder="Tratamientos propuestos" required>
+                <input type="number" id="estimacionCostos" placeholder="Estimación de costos ($)" required>
+            </div>
+
+            <div class="form-section">
+                <h2>Firma Digital</h2>
+                <canvas id="signaturePad"></canvas>
+                <button type="button" id="clearSignature">Limpiar Firma</button>
+            </div>
+
+            <button type="button" id="generatePDF">Generar PDF</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
